@@ -1,0 +1,28 @@
+@import '../../scss/colors.scss';
+
+.movieList {
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+
+  .wrapper {
+    width: 90%;
+    max-width: 1000px;
+    padding: 0 10px 10px 10px;
+    align-self: center;
+
+    .title {
+      margin-left: 15px;
+      text-align: left;
+    }
+
+    .moviesContainer {
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+  }
+}
+

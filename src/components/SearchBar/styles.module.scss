@@ -1,0 +1,41 @@
+@import '../../scss/colors.scss';
+
+.searchBar {
+  background-color: white;
+  padding: 5px;
+  text-align: center;
+  margin-bottom: 20px;
+  position: sticky;
+  top: 0;
+}
+
+.inputContainer {
+  display: flex;
+  width: 90%;
+  max-width: 1000px;
+  height: 20px;
+  margin: 0 auto;
+
+  .searchIconContainer {
+    background-image: url('./imgs/search-solid.svg');
+    background-repeat: no-repeat;
+    background-size: 15px 15px;
+    background-position: center;
+    width: 30px;
+    background-color: $white;
+  }
+
+  .searchBox {
+    border: 0;
+    flex-grow: 1;
+    border-bottom: 1px solid gray;
+  
+    &:focus {
+      border-color: rgb(36, 168, 212);
+    }
+  }
+}
+
+.searchBox:focus {
+  outline: 0;
+}

@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders favorite box correctly 1`] = `
+<div
+  className="box"
+  onClick={[Function]}
+>
+  <div
+    className="img"
+    style={
+      Object {
+        "backgroundImage": "url(movie-poster.png)",
+      }
+    }
+  />
+  <div
+    className="movieInfo"
+  >
+    <div
+      className="titleWrapper"
+    >
+      <h4
+        className="title"
+      >
+        <span
+          width={0}
+        >
+          <span />
+          <span>
+            fake movie
+          </span>
+          <span
+            style={
+              Object {
+                "left": 0,
+                "position": "fixed",
+                "top": 0,
+                "visibility": "hidden",
+              }
+            }
+          >
+            ...
+          </span>
+        </span>
+      </h4>
+      <div
+        className="removeBtn"
+        id="fb-removebtn"
+        onClick={[Function]}
+        title="Remove favorite"
+      />
+    </div>
+  </div>
+</div>
+`;

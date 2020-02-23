@@ -1,3 +1,16 @@
+# Movie Search Exercise Project
+## General Information
+This is WebApp project for a Movie Search Exercise, developed using Facebook's library **React.js**. All data is provided by [**TheMovieDB** API](https://www.themoviedb.org/documentation/api).
+
+## Set up
+
+The project has been built using node.js v12.15. Make sure your node version is >= v12.15 before you install the packages. Once node is installed. In the project directory, run:
+```sh
+npm install
+```
+This installs all the npm dependencies for the project.<br>
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -27,6 +40,43 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
+## Environment Variables
+
+Your project can consume variables declared in your environment as if they were declared locally in your JS files. By default you will have `NODE_ENV` defined for you, and any other environment variables starting with `REACT_APP_`.
+
+**The environment variables are embedded during the build time**. Since Create React App produces a static HTML/CSS/JS bundle, it can’t possibly read them at runtime. To read them at runtime, you would need to load HTML into memory on the server and replace placeholders in runtime, just like [described here](#injecting-data-from-the-server-into-the-page). Alternatively you can rebuild the app on the server anytime you change them.
+
+These environment variables will be defined for you on `process.env`. For example, having an environment
+variable named `REACT_APP_SECRET_CODE` will be exposed in your JS as `process.env.REACT_APP_SECRET_CODE`.
+
+There is also a special built-in environment variable called `NODE_ENV`. You can read it from `process.env.NODE_ENV`. When you run `npm start`, it is always equal to `'development'`, when you run `npm test` it is always equal to `'test'`, and when you run `npm run build` to make a production bundle, it is always equal to `'production'`. **You cannot override `NODE_ENV` manually.** This prevents developers from accidentally deploying a slow development build to production.
+
+### Adding Development Environment Variables In `.env`
+
+To define permanent environment variables, create a file called `.env` in the root of your project:
+
+```
+REACT_APP_SECRET_CODE=abcdef
+```
+
+> Note: You must create custom environment variables beginning with `REACT_APP_`. Any other variables except `NODE_ENV` will be ignored to avoid [accidentally exposing a private key on the machine that could have the same name](https://github.com/facebookincubator/create-react-app/issues/865#issuecomment-252199527). Changing any environment variables will require you to restart the development server if it is running.
+
+`.env` files **should be** checked into source control (with the exclusion of `.env*.local`).
+
+#### What other `.env` files can be used?
+
+> Note: this feature is **available with `react-scripts@1.0.0` and higher**.
+
+* `.env`: Default.
+* `.env.local`: Local overrides. **This file is loaded for all environments except test.**
+* `.env.development`, `.env.production`: Environment-specific settings.
+* `.env.development.local`, `.env.production.local`: Local overrides of environment-specific settings.
+
+Files on the left have more priority than files on the right:
+
+* `npm start`: `.env.development.local`, `.env.development`, `.env.local`, `.env`
+* `npm run build`: `.env.production.local`, `.env.production`, `.env.local`, `.env`
+
 ### `npm run eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
@@ -37,32 +87,11 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## Technologies used
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+* [React.js](https://reactjs.org/).
+* [Redux](https://redux.js.org/).
+* [Redux-Saga](https://redux-saga.js.org/).
+* [Create React App](https://github.com/facebook/create-react-app).
+* [SASS](https://sass-lang.com/).
+* [ESLint](https://eslint.org/).

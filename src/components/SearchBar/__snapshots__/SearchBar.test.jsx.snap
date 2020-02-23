@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders favorite box correctly 1`] = `
+<div
+  className="searchBar"
+>
+  <form
+    className="inputContainer"
+  >
+    <div
+      className="searchIconContainer"
+    >
+      <i
+        className="material-icons"
+      />
+    </div>
+    <input
+      className="searchBox"
+      onChange={[Function]}
+      onKeyDown={[Function]}
+      placeholder="Search..."
+      type="text"
+      value=""
+    />
+  </form>
+</div>
+`;

@@ -1,0 +1,31 @@
+.favorites {
+  height: 100px;
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+
+  .title {
+    display: flex;
+    margin: 10px auto;
+    width: fit-content;
+
+    .favoriteImg {
+      margin-left: 3px;
+      height: 12px;
+      width: 12px;
+    }
+  }
+
+  .container {
+    display: flex;
+    padding: 5px 10px 5px;
+    font-size: 10px;
+    overflow-x: scroll;
+    height: 70px;
+    &.empty {
+      margin: auto;
+      text-align: center;
+      width: fit-content;
+    }
+  }
+}
