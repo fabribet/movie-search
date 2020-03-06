@@ -17,7 +17,7 @@ const mapDispatchToProps = dispatch => ({
   },
   /**
    * Dispatches the remove favorite action.
-   * @param {number} movieI
+   * @param {number} movieId
    */
   removeFavorite (movieId) {
     dispatch(actions.RemoveFavorite(movieId))
