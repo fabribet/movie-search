@@ -5,22 +5,22 @@ import HomePage from './HomePage'
 
 const mapStateToProps = state => ({
   popularMovies: state.TMDB.popularMovies,
-  searchedMovies:  state.TMDB.searchedMovies,
+  searchedMovies: state.TMDB.searchedMovies,
   apiConfig: state.TMDB.apiConfig,
-  // favorites: state.Favorites.favorites
+  favorites: state.Favorites.favorites
 })
 
 const mapDispatchToProps = dispatch => ({
   /**
    * Dispatches the action for calling the Popular movies API
    */
-  getPopularMovies() {
+  getPopularMovies () {
     dispatch(actions.GetPopularMovies())
   },
   /**
    * Dispatches the action for calling the API config
    */
-  getApiConfig() {
+  getApiConfig () {
     dispatch(actions.GetConfig())
   }
 })

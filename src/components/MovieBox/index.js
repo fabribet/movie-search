@@ -10,16 +10,16 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   /**
    * Dispatches the add favorite action.
-   * @param {Object} movie 
+   * @param {Object} movie
    */
-  addFavorite(movie) {
+  addFavorite (movie) {
     dispatch(actions.AddFavorite(movie))
   },
   /**
    * Dispatches the remove favorite action.
-   * @param {number} movieId 
+   * @param {number} movieI
    */
-  removeFavorite(movieId) {
+  removeFavorite (movieId) {
     dispatch(actions.RemoveFavorite(movieId))
   }
 })

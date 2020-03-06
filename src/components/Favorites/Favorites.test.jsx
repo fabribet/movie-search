@@ -1,34 +1,48 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import renderer from 'react-test-renderer';
-import Favorites from './Favorites';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import renderer from 'react-test-renderer'
+import { render } from '@testing-library/react'
+import { Provider } from 'react-redux'
 
-const favoritesExample = {
-    1: {
-        id: 1,
-        title: 'Movie 1'
-    },
+import Favorites from './Favorites'
+import { EMPTY_FAVORITES_TXT } from '../../utils/constants'
+import { mockCanvas, createMockStore, FAVORITES_DATA } from './../../testUtils'
 
-    2: {
-        id: 2,
-        title: 'Movie 2'
-    }
-}
+mockCanvas()
+const store = createMockStore()
 
-const SpiedRemoveFavorite = jest.fn();
-const favorites = <Favorites  favorites={favoritesExample} />
+const favorites =
+  <Provider store={store}>
+    <Favorites favorites={FAVORITES_DATA} />
+  </Provider>
 
-test('renders without crashing', () => {
-  const div = document.createElement('div');
+it('renders without crashing', () => {
+  const div = document.createElement('div')
   ReactDOM.render(
     favorites,
     div
-  );
-});
+  )
+})
 
 it('Renders favorites correctly', () => {
   const tree = renderer
     .create(favorites)
-    .toJSON();
-  expect(tree).toMatchSnapshot();
-});
+    .toJSON()
+  expect(tree).toMatchSnapshot()
+})
+
+it('Renders an empty list message when no favorites have been added', () => {
+  const { queryByText } = render(
+    <Provider store={store}>
+      <Favorites favorites={{}} />
+    </Provider>
+  )
+
+  expect(queryByText(EMPTY_FAVORITES_TXT)).not.toBeNull()
+})
+
+it('Renders the list and no text is displayed', () => {
+  const { queryByText } = render(favorites)
+
+  expect(queryByText(EMPTY_FAVORITES_TXT)).toBeNull()
+})

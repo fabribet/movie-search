@@ -1,0 +1,124 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders favorites correctly 1`] = `
+<div
+  className="favorites"
+>
+  <h5
+    className="title"
+  >
+    Favorite Movies 
+    <img
+      alt="favorite"
+      className="favoriteImg"
+      src="heart-solid.svg"
+    />
+  </h5>
+  <div
+    className="container "
+  >
+    <div
+      className="box"
+      onClick={[Function]}
+    >
+      <div
+        className="img"
+        style={
+          Object {
+            "backgroundImage": "url(movie-poster.png)",
+          }
+        }
+      />
+      <div
+        className="movieInfo"
+      >
+        <div
+          className="titleWrapper"
+        >
+          <h4
+            className="title"
+          >
+            <span
+              width={0}
+            >
+              <span />
+              <span>
+                Movie 1
+              </span>
+              <span
+                style={
+                  Object {
+                    "left": 0,
+                    "position": "fixed",
+                    "top": 0,
+                    "visibility": "hidden",
+                  }
+                }
+              >
+                ...
+              </span>
+            </span>
+          </h4>
+          <div
+            className="removeBtn"
+            id="fb-removebtn"
+            onClick={[Function]}
+            title="Remove favorite"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="box"
+      onClick={[Function]}
+    >
+      <div
+        className="img"
+        style={
+          Object {
+            "backgroundImage": "url(movie-poster.png)",
+          }
+        }
+      />
+      <div
+        className="movieInfo"
+      >
+        <div
+          className="titleWrapper"
+        >
+          <h4
+            className="title"
+          >
+            <span
+              width={0}
+            >
+              <span />
+              <span>
+                Movie 2
+              </span>
+              <span
+                style={
+                  Object {
+                    "left": 0,
+                    "position": "fixed",
+                    "top": 0,
+                    "visibility": "hidden",
+                  }
+                }
+              >
+                ...
+              </span>
+            </span>
+          </h4>
+          <div
+            className="removeBtn"
+            id="fb-removebtn"
+            onClick={[Function]}
+            title="Remove favorite"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -10,7 +10,7 @@ const THROTTLING_TIME = process.env.REACT_APP_THROTTLING_TIME_MS
  *
  * Properties
  * - handleSearch {func} - The handler for the search action. {Required}
- * - clearSearch {func}  - Handler for the search input clearence. 
+ * - clearSearch {func}  - Handler for the search input clearence.
  */
 export default class SearchBar extends React.Component {
   constructor (props) {
@@ -22,8 +22,8 @@ export default class SearchBar extends React.Component {
 
     this.search = this.search.bind(this)
   }
-  
-  static get propTypes() {
+
+  static get propTypes () {
     return {
       search: PropTypes.func.isRequired,
       clearSearch: PropTypes.func.isRequired
@@ -33,7 +33,7 @@ export default class SearchBar extends React.Component {
   /**
    * Validates that the query is not empty and calls the handler.
    */
-  search() {
+  search () {
     if (this.state.query) {
       this.props.search(this.state.query)
     } else this.props.clearSearch()
@@ -43,15 +43,15 @@ export default class SearchBar extends React.Component {
    * Creates a timeout to trigger the search based on the configured throttling time to avoid innecesary
    * calls to the API.
    */
-  throttle() {
+  throttle () {
     const self = this
     if (this.throttling) clearInterval(this.throttling)
-    this.throttling = setTimeout (() => {
+    this.throttling = setTimeout(() => {
       self.search()
     }, THROTTLING_TIME)
   }
-  
-  render() {
+
+  render () {
     return (
       <div className={styles.searchBar}>
         <form className={styles.inputContainer} >
@@ -59,12 +59,12 @@ export default class SearchBar extends React.Component {
             <i className="material-icons"></i>
           </div>
           <input
+            id='search-bar'
             value={this.state.query}
             onChange={event => {
               this.setState({ query: event.target.value }, () => {
                 this.throttle()
               })
-
             }}
             onKeyDown={event => {
               switch (event.key) {
@@ -72,9 +72,9 @@ export default class SearchBar extends React.Component {
                   this.setState({ query: '' }, () => {
                     this.throttle()
                   })
-                  break;
+                  break
                 default:
-                    break
+                  break
               }
             }}
             className={styles.searchBox}

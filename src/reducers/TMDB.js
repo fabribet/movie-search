@@ -3,12 +3,11 @@ import { types } from '../actions/TMDB'
 const INITIAL_STATE = { loading: true, error: null, data: null }
 
 export default (state = {
-    searchedMovies: { loading: false, error: null, data: null },
-    popularMovies: INITIAL_STATE,
-    apiConfig: INITIAL_STATE
-  }, action) => {
+  searchedMovies: { loading: false, error: null, data: null },
+  popularMovies: INITIAL_STATE,
+  apiConfig: INITIAL_STATE
+}, action) => {
   switch (action.type) {
-    
     case types.GET_POPULAR_MOVIES: {
       return {
         ...state,

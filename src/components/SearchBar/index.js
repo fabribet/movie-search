@@ -6,14 +6,14 @@ const mapDispatchToProps = dispatch => ({
   /**
    * Dispatches the SearchMovie action.
    * @param {string} query - The search query string.
-   */ 
-  search(query) {
+   */
+  search (query) {
     dispatch(actions.SearchMovies(query))
   },
   /**
    * Dispatches the ClearSearch action.
    */
-  clearSearch() {
+  clearSearch () {
     dispatch(actions.ClearSearch())
   }
 })

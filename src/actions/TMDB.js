@@ -11,14 +11,14 @@ export const types = {
 
   GET_CONFIG: 'GET_CONFIG',
   GET_CONFIG_RESOLVED: 'GET_CONFIG_RESOLVED',
-  GET_CONFIG_REJECTED: 'GET_CONFIG_REJECTED',
+  GET_CONFIG_REJECTED: 'GET_CONFIG_REJECTED'
 }
 
 export const actions = {
   /**
    * Returns the Get Popular Movies Action
    */
-  GetPopularMovies() {
+  GetPopularMovies () {
     return { type: types.GET_POPULAR_MOVIES }
   },
 
@@ -27,7 +27,7 @@ export const actions = {
    * @param {object} response - Fetch API response
    * @param {object} payload - Fetch API Payload encoded as JSON
    */
-  GetPopularMoviesResolved(response, payload) {
+  GetPopularMoviesResolved (response, payload) {
     return {
       type: types.GET_POPULAR_MOVIES_RESOLVED,
       response,
@@ -39,7 +39,7 @@ export const actions = {
    * Returns the Get Popular Movies Rejected Action
    * @param {object} error - Fetch API response
    */
-  GetPopularMoviesRejected(error) {
+  GetPopularMoviesRejected (error) {
     return {
       type: types.GET_POPULAR_MOVIES_REJECTED,
       error
@@ -50,7 +50,7 @@ export const actions = {
    * Generates a SearchMovies Action
    * @param {string} query - The query string to search Movies
    */
-  SearchMovies(query) {
+  SearchMovies (query) {
     return {
       type: types.SEARCH_MOVIES,
       query
@@ -62,7 +62,7 @@ export const actions = {
    * @param {object} response - Fetch API response
    * @param {object} payload - Fetch API Payload encoded as JSON
    */
-  SearchMoviesResolved(response, payload) {
+  SearchMoviesResolved (response, payload) {
     return {
       type: types.SEARCH_MOVIES_RESOLVED,
       response,
@@ -74,7 +74,7 @@ export const actions = {
    * Generates a SearchMovies Rejected Action
    * @param {object} error - Fetch API response
    */
-  SearchMoviesRejected(error) {
+  SearchMoviesRejected (error) {
     return {
       type: types.SEARCH_MOVIES_REJECTED,
       error
@@ -84,14 +84,14 @@ export const actions = {
   /**
    * Returns the Clear Search action.
    */
-  ClearSearch() {
+  ClearSearch () {
     return { type: types.CLEAR_SEARCH }
   },
-  
+
   /**
    * Generates a Get Config Action
    */
-  GetConfig() {
+  GetConfig () {
     return { type: types.GET_CONFIG }
   },
 
@@ -100,7 +100,7 @@ export const actions = {
    * @param {object} response - Fetch API response
    * @param {object} payload - Fetch API Payload encoded as JSON
    */
-  GetConfigResolved(response, payload) {
+  GetConfigResolved (response, payload) {
     return {
       type: types.GET_CONFIG_RESOLVED,
       response,
@@ -112,10 +112,10 @@ export const actions = {
    * Generates a Get Config Rejected Action
    * @param {object} error - Fetch API response
    */
-  GetConfigRejected(error) {
+  GetConfigRejected (error) {
     return {
       type: types.GET_CONFIG_REJECTED,
       error
     }
-  },
+  }
 }

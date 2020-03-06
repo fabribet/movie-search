@@ -1,0 +1,300 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders MovieList correctly 1`] = `
+<div
+  className="movieList"
+>
+  <div
+    className="wrapper"
+  >
+    <h2
+      className="title"
+    >
+      PAGE_TITLE
+    </h2>
+    <div
+      className="moviesContainer"
+    >
+      <div
+        className="box"
+        onClick={[Function]}
+      >
+        <div
+          className="img"
+          style={
+            Object {
+              "backgroundImage": "url(movie-poster.png)",
+            }
+          }
+        />
+        <div
+          className="movieInfo"
+        >
+          <div
+            className="titleWrapper"
+          >
+            <h4
+              className="title"
+            >
+              <span
+                width={0}
+              >
+                <span />
+                <span>
+                  Movie 1
+                </span>
+                <span
+                  style={
+                    Object {
+                      "left": 0,
+                      "position": "fixed",
+                      "top": 0,
+                      "visibility": "hidden",
+                    }
+                  }
+                >
+                  ...
+                </span>
+              </span>
+            </h4>
+            <div
+              className="favorite solid"
+              id="favoriteBtn"
+              onClick={[Function]}
+              title="Remove favorite"
+            />
+          </div>
+          <div
+            className="ratingWrapper"
+          >
+            Rating:
+            <span>
+              <span
+                className="rating normalRating"
+              >
+                5
+              </span>
+              Votes:
+              <span
+                className="voteCount"
+              >
+                83
+              </span>
+            </span>
+          </div>
+          <div
+            className="overview"
+          >
+            <span
+              width={0}
+            >
+              <span />
+              <span>
+                An overview
+              </span>
+              <span
+                style={
+                  Object {
+                    "left": 0,
+                    "position": "fixed",
+                    "top": 0,
+                    "visibility": "hidden",
+                  }
+                }
+              >
+                ...
+              </span>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div
+        className="box"
+        onClick={[Function]}
+      >
+        <div
+          className="img"
+          style={
+            Object {
+              "backgroundImage": "url(movie-poster.png)",
+            }
+          }
+        />
+        <div
+          className="movieInfo"
+        >
+          <div
+            className="titleWrapper"
+          >
+            <h4
+              className="title"
+            >
+              <span
+                width={0}
+              >
+                <span />
+                <span>
+                  Third Title
+                </span>
+                <span
+                  style={
+                    Object {
+                      "left": 0,
+                      "position": "fixed",
+                      "top": 0,
+                      "visibility": "hidden",
+                    }
+                  }
+                >
+                  ...
+                </span>
+              </span>
+            </h4>
+            <div
+              className="favorite empty"
+              id="favoriteBtn"
+              onClick={[Function]}
+              title="Add favorite"
+            />
+          </div>
+          <div
+            className="ratingWrapper"
+          >
+            Rating:
+            <span>
+              <span
+                className="rating lowRating"
+              >
+                4
+              </span>
+              Votes:
+              <span
+                className="voteCount"
+              >
+                811
+              </span>
+            </span>
+          </div>
+          <div
+            className="overview"
+          >
+            <span
+              width={0}
+            >
+              <span />
+              <span>
+                An overview of the third
+              </span>
+              <span
+                style={
+                  Object {
+                    "left": 0,
+                    "position": "fixed",
+                    "top": 0,
+                    "visibility": "hidden",
+                  }
+                }
+              >
+                ...
+              </span>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div
+        className="box"
+        onClick={[Function]}
+      >
+        <div
+          className="img"
+          style={
+            Object {
+              "backgroundImage": "url(movie-poster.png)",
+            }
+          }
+        />
+        <div
+          className="movieInfo"
+        >
+          <div
+            className="titleWrapper"
+          >
+            <h4
+              className="title"
+            >
+              <span
+                width={0}
+              >
+                <span />
+                <span>
+                  Fourth Title
+                </span>
+                <span
+                  style={
+                    Object {
+                      "left": 0,
+                      "position": "fixed",
+                      "top": 0,
+                      "visibility": "hidden",
+                    }
+                  }
+                >
+                  ...
+                </span>
+              </span>
+            </h4>
+            <div
+              className="favorite empty"
+              id="favoriteBtn"
+              onClick={[Function]}
+              title="Add favorite"
+            />
+          </div>
+          <div
+            className="ratingWrapper"
+          >
+            Rating:
+            <span>
+              <span
+                className="rating goodRating"
+              >
+                7
+              </span>
+              Votes:
+              <span
+                className="voteCount"
+              >
+                111
+              </span>
+            </span>
+          </div>
+          <div
+            className="overview"
+          >
+            <span
+              width={0}
+            >
+              <span />
+              <span>
+                An overview of the fourth
+              </span>
+              <span
+                style={
+                  Object {
+                    "left": 0,
+                    "position": "fixed",
+                    "top": 0,
+                    "visibility": "hidden",
+                  }
+                }
+              >
+                ...
+              </span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

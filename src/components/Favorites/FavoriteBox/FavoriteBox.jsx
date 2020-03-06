@@ -17,61 +17,71 @@ import moviePoster from './imgs/movie-poster.png'
  *    - title
  *    - poster_path
  */
-function FavoriteBox(props) {
+export default class FavoriteBox extends React.Component {
+  constructor (props) {
+    super(props)
+    this.onFavoriteClick = this.onFavoriteClick.bind(this)
+    this.onMovieClick = this.onMovieClick.bind(this)
+  }
+
+  static get propTypes () {
+    return {
+      imgUrl: PropTypes.string,
+      removeFavorite: PropTypes.func.isRequired,
+      movie: PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        title: PropTypes.string.isRequired,
+        poster_path: PropTypes.string.isRequired
+      }).isRequired
+    }
+  }
 
   /**
    * Handles the remove button. Calls the removing method.
-   * @param {window.Event} e 
+   * @param {window.Event} e
    */
-  const onFavoriteClick = (e) => {
-    e.cancelBubble = true;
-    if (e.stopPropagation) e.stopPropagation();
-    props.removeFavorite(props.movie.id)
+  onFavoriteClick (e) {
+    e.cancelBubble = true
+    if (e.stopPropagation) e.stopPropagation()
+    this.props.removeFavorite(this.props.movie.id)
   }
 
   /**
    * Handles the box click. Opens a new window with searching for the movie trailer on YouTube.
-   * @param {window.Event} e 
+   * @param {window.Event} e
    */
-  const onMovieClick = (e) => {
+  onMovieClick (e) {
     const windowFeatures = 'menubar=no,location=no,resizable=no,scrollbars=yes,status=yes,height=400,width=400'
     window.open(
-      `https://www.youtube.com/results?search_query=${props.movie.title}+movie+trailer`,
-      `${props.movie.title} trailer`,
+      `https://www.youtube.com/results?search_query=${this.props.movie.title}+movie+trailer`,
+      `${this.props.movie.title} trailer`,
       windowFeatures
     )
   }
 
-  return (
-    <div className={styles.box} onClick={onMovieClick}>
-      <div className={styles.img}  style={{
-        backgroundImage: props.imgUrl && props.movie.poster_path 
-          ? `url(${props.imgUrl}w154${props.movie.poster_path})`
-          : `url(${moviePoster})`
-        }}
-      />
-      <div className={styles.movieInfo}>
-        <div className={styles.titleWrapper}>
-          <h4 className={styles.title}>
-            <Truncate lines={2} ellipsis="...">
-              {props.movie.title}
-            </Truncate>
-          </h4>
-          <div id={'fb-removebtn'} className={styles.removeBtn} title={'Remove favorite'} onClick={onFavoriteClick}/>
+  render () {
+    const { movie, imgUrl } = this.props
+    return (
+      <div className={styles.box} onClick={this.onMovieClick}>
+        <div
+          className={styles.img}
+          style={{
+            backgroundImage: imgUrl && movie.poster_path
+              ? `url(${imgUrl}w154${movie.poster_path})`
+              : `url(${moviePoster})`
+          }}
+        />
+        <div className={styles.movieInfo}>
+          <div className={styles.titleWrapper}>
+            <h4 className={styles.title}>
+              <Truncate lines={2} ellipsis="...">
+                {movie.title}
+              </Truncate>
+            </h4>
+            <div id={'fb-removebtn'} className={styles.removeBtn} title={'Remove favorite'} onClick={this.onFavoriteClick}/>
+          </div>
         </div>
       </div>
-    </div>
-  )
+    )
+  }
 }
-
-FavoriteBox.propTypes = {
-    imgUrl: PropTypes.string,
-    removeFavorite: PropTypes.func.isRequired,
-    movie: PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      title: PropTypes.string.isRequired,
-      poster_path: PropTypes.string.isRequired
-    }).isRequired
-}
-
-export default FavoriteBox

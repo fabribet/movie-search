@@ -8,7 +8,7 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-  removeFavorite(movieId) {
+  removeFavorite (movieId) {
     dispatch(actions.RemoveFavorite(movieId))
   }
 })

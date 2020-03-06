@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders Movie box correctly 1`] = `
+<div
+  className="box"
+  onClick={[Function]}
+>
+  <div
+    className="img"
+    style={
+      Object {
+        "backgroundImage": "url(movie-poster.png)",
+      }
+    }
+  />
+  <div
+    className="movieInfo"
+  >
+    <div
+      className="titleWrapper"
+    >
+      <h4
+        className="title"
+      >
+        <span
+          width={0}
+        >
+          <span />
+          <span>
+            Fake movie
+          </span>
+          <span
+            style={
+              Object {
+                "left": 0,
+                "position": "fixed",
+                "top": 0,
+                "visibility": "hidden",
+              }
+            }
+          >
+            ...
+          </span>
+        </span>
+      </h4>
+      <div
+        className="favorite empty"
+        id="favoriteBtn"
+        onClick={[Function]}
+        title="Add favorite"
+      />
+    </div>
+    <div
+      className="ratingWrapper"
+    >
+      Rating:
+      <span>
+        <span
+          className="rating goodRating"
+        >
+          8
+        </span>
+        Votes:
+        <span
+          className="voteCount"
+        >
+          889
+        </span>
+      </span>
+    </div>
+    <div
+      className="overview"
+    >
+      <span
+        width={0}
+      >
+        <span />
+        <span>
+          An overview of a fake movie
+        </span>
+        <span
+          style={
+            Object {
+              "left": 0,
+              "position": "fixed",
+              "top": 0,
+              "visibility": "hidden",
+            }
+          }
+        >
+          ...
+        </span>
+      </span>
+    </div>
+  </div>
+</div>
+`;
