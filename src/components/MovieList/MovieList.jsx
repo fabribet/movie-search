@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import styles from './styles.module.scss'
 
 import MovieBox from '../MovieBox'
+import { EMPTY_MOVIE_LIST_TXT } from '../../utils/constants'
 
 /**
  * MovieList - React component.
@@ -16,7 +17,7 @@ import MovieBox from '../MovieBox'
  *    - vote_average
  *    - poster_path
  */
-function MovieList(props) {
+function MovieList (props) {
   return (
     <div className={styles.movieList}>
       <div className={styles.wrapper}>
@@ -24,7 +25,7 @@ function MovieList(props) {
         <div className={styles.moviesContainer}>
           {props.movies && props.movies.length
             ? props.movies.map((movie, index) => <MovieBox key={index} movie={movie} favorite={!!(props.favorites[movie.id])}/>)
-            : 'There are no movies that match the criteria, try again.'
+            : EMPTY_MOVIE_LIST_TXT
           }
         </div>
       </div>
@@ -33,16 +34,16 @@ function MovieList(props) {
 }
 
 MovieList.propTypes = {
-    favorites: PropTypes.object,
-    title: PropTypes.string,
-    movies: PropTypes.arrayOf(
-      PropTypes.shape({
-        title: PropTypes.string.isRequired,
-        vote_average: PropTypes.number,
-        overview: PropTypes.string,
-        poster_path: PropTypes.string.isRequired
-      }).isRequired
-    ).isRequired
+  favorites: PropTypes.object,
+  title: PropTypes.string,
+  movies: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      vote_average: PropTypes.number,
+      overview: PropTypes.string,
+      poster_path: PropTypes.string.isRequired
+    }).isRequired
+  ).isRequired
 }
 
 export default MovieList

@@ -2,7 +2,7 @@ import { connect } from 'react-redux'
 import Favorites from './Favorites'
 
 const mapStateToProps = state => {
-  return{
+  return {
     favorites: state.Favorites.favorites
   }
 }

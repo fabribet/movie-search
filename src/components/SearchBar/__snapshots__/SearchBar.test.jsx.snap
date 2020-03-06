@@ -16,6 +16,7 @@ exports[`Renders favorite box correctly 1`] = `
     </div>
     <input
       className="searchBox"
+      id="search-bar"
       onChange={[Function]}
       onKeyDown={[Function]}
       placeholder="Search..."
